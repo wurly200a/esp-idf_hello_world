@@ -6,7 +6,7 @@ exit
 fi
 
 if [ "$#" != 1 ]; then
-IMAGE_NAME="nuttx_esp32_builder"
+IMAGE_NAME="esp-idf_builder"
 else
 IMAGE_NAME=$1
 fi
