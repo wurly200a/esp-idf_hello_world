@@ -48,3 +48,6 @@ Build.
 $ build/03_build.sh
 ```
 
+# Execution Result
+
+![execution.png](execution.png)
