@@ -25,7 +25,7 @@ RUN apt install -y git wget flex bison gperf python3 python3-venv cmake ninja-bu
 # Get ESP-IDF
 USER ${USER_ID}
 RUN mkdir -p ~/esp
-RUN git clone --recursive https://github.com/espressif/esp-idf.git ~/esp/esp-idf
+RUN git clone --recursive https://github.com/espressif/esp-idf.git -b v5.0.2 ~/esp/esp-idf
 
 # ESP-IDF Set up the tools
 RUN ~/esp/esp-idf/install.sh esp32

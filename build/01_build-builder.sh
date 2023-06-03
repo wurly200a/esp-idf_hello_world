@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$#" != 1 ]; then
-IMAGE_NAME="esp-idf_builder"
+IMAGE_NAME="esp-idf-v5_builder"
 else
 IMAGE_NAME=$1
 fi
