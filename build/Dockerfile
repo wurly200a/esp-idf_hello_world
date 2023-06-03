@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-ARG USER_NAME USER_ID GROUP_NAME GROUP_ID PASSWORD
+ARG USER_NAME USER_ID GROUP_NAME GROUP_ID PASSWORD IMAGE_NAME
 
 RUN if [ -z "${USER_NAME}"  ] || \
        [ -z "${USER_ID}"    ] || \
@@ -30,3 +30,6 @@ RUN git clone --recursive https://github.com/espressif/esp-idf.git -b v5.0.2 ~/e
 # ESP-IDF Set up the tools
 RUN ~/esp/esp-idf/install.sh esp32
 RUN echo "alias get_idf='. $HOME/esp/esp-idf/export.sh'" > ~/.bash_aliases
+
+# Set Prompt
+RUN echo PS1="'(docker)${IMAGE_NAME}:\w${PS1}'" >> ~/.bashrc
